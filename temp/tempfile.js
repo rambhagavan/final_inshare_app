@@ -37,12 +37,12 @@ router.post("/",  (req, res) => {
         res.send(`error ${404}`)
     }
     const uid=req.cookies.uid;
-    console.log(req.file.originalname);
+    
     if(!uid){
       return res.redirect('/');
     }
     const email=getuser(uid);
-    console.log(email);
+   
     if(!email){
       return res.redirect('/');
     }
