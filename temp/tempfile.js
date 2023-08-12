@@ -58,7 +58,7 @@ router.post("/",  (req, res) => {
         });
       const response = await file.save();
       // console.log(req.cookies);
-      res.render('getlink',{downloadLink:`${process.env.APP_BASE_URL}/${uuid}`,uuid:response.uuid})
+      res.render('getlink',{downloadLink:`${process.env.APP_BASE_URL}/file/${uuid}`,uuid:response.uuid})
   })
 });
 
